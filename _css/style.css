@@ -1,0 +1,1155 @@
+/* lettertypes */
+
+@font-face {
+    font-family: NexaBold;
+    src: url(/_fonts/NexaBold.otf);
+  }
+
+@font-face {
+    font-family: NexaLight;
+    src: url(/_fonts/NexaLight.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url(/_fonts/Poppins-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url(/_fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(/_fonts/Poppins-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* tags die op verschillende plekken gebruikt kan worden */
+
+h1 {
+    color: #FAB600;
+    font-family: PoppinsBold;
+    font-size: 30px;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-family: PoppinsBold;
+    font-size: 25px;
+}
+
+h3 {
+    color: #FAB600;
+    font-family: NexaLight;
+    font-size: 20px;
+}
+
+p {
+    color: #E6E6E6;
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+/* links */
+
+.link {
+    color: #FAB600;
+    font-family: Verdana;
+    text-decoration: underline;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #FAD000;
+}
+
+.link:active {
+    color: #00C8FA;
+}
+
+.link:disabled {
+    color: #CDCDCD;
+}
+
+a>.link {
+    width: auto;
+}
+
+section {
+    background-color: #000000;
+    margin: 150px 0;
+}
+
+/* primary knop */
+
+.primary-button {
+    background-color: #FAB600;
+    border: solid #FAB600 4px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: PoppinsBold;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+}
+
+.primary-button:hover {
+    background-color: #FAB600;
+    border: solid #FAB600 4px;
+    color: #FFFFFF;
+}
+
+.primary-button:active {
+    background-color: #FAD000;
+    border: solid #FAD000 4px;
+    color: #000000;
+}
+
+.primary-button:disabled {
+    background-color: #CDCDCD;
+    color: #6A6A6A;
+    border: none;
+}
+
+/* secondary knop */
+
+.secondary-button {
+    background-color: transparent;
+    border: solid #FAB600 4px;
+    color: #FAB600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: PoppinsBold;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+}
+
+.secondary-button:hover {
+    background-color: #FAB600;
+    color: #000000;
+}
+
+.secondary-button:active {
+    background-color: transparent;
+    border: solid #FAD000 4px;
+    color: #FAD000;
+}
+
+.secondary-button:disabled {
+    background-color: transparent;
+    border: solid #CDCDCD 4px;
+    color: #CDCDCD;
+}
+
+/* kleur van de website achtergrond */
+
+body {
+    background-color: #212529;
+}
+
+/* header van de website */
+
+header {
+    width: 100%;
+    height: 139px;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 25% 1fr 200px 200px;
+    grid-column-gap: 10px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;  
+}
+
+header>a {
+    grid-column-start: 2;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.header-logo {
+    height: 113px;
+    width: 112px;
+}
+
+.header-login {
+    grid-template-rows: auto;
+    grid-template-columns: 15% 15% 15%;
+}
+
+.header-registratie {
+    font-family: NexaLight;
+}
+
+/* logo van de website */
+
+header>svg {
+    fill: #FAB600;
+    height: 113px;
+    width: 112px;
+    grid-column-start: 4;
+}
+
+/* navigatie */
+
+nav {
+    color: #FAB600;
+    height: 30px;
+    width: 500px;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 119px;
+    display: flex;
+    z-index: 3;  
+}
+
+/* element verstoppen gebruikt voor pop ups */
+
+.hidden {
+    display: none !important;
+}
+
+/* login scherm */
+
+.login {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #212529;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 40% 40% 10%;
+    padding: 20px 50px;
+    width: 300px;
+    grid-row-gap: 20px;
+}
+
+.login>h1 {
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+}
+
+/* login kruis */
+
+.login>svg {
+    height: 30px;
+    fill: #FFFFFF;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    cursor: pointer;
+}
+
+/* formulier van de login scherm */
+
+.login>form {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* tekstvakken van de formulier */
+
+.login>form>input {
+    margin-bottom: 20px;
+}
+
+.login>form>input[type=text] {
+    width: 100%;
+}
+
+.login>form>input[type=password] {
+    width: 100%;
+}
+
+.login>form>input[type=submit] {
+    width: 100%;
+}
+
+.login>form>label>p {
+    font-size: 15px;
+    display: inline;
+}
+
+.login>.link {
+    justify-self: right;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/* registratie scherm */
+
+.registreren {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #212529;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 40% 40% 10%;
+    padding: 20px 50px;
+    width: 800px;
+}
+
+.registreren>h1 {
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+}
+
+/* registratie kruis */
+
+.registreren>svg {
+    height: 30px;
+    fill: #FFFFFF;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    cursor: pointer;
+}
+
+.registreren>form {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.registreren>form>section {
+    background-color: transparent;
+    margin: 0;
+    justify-content: space-between;
+}
+
+/* eerste kolom van de registratie scherm */
+
+.form-kolom1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+}
+
+.form-kolom1>label {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* tekstvakken van de registratie scherm van kolom 2 */
+
+.form-kolom1>input[type=text]:not(#name) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* tweede kolom van de registratie scherm */
+
+.form-kolom2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+}
+
+.form-kolom2>label {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* tekstvakken van de registratie scherm van kolom 2 */
+
+
+.form-kolom2>input[type=text]:not(#Telefoonnummer) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.registreren>form>section>input {
+    margin-bottom: 20px;
+}
+
+.registreren>form>section>input[type=text] {
+    width: 100%;
+}
+
+.registreren>form>section>input[type=password] {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.registreren>form>input[type=submit] {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.registreren>form>input[type=checkbox] {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: right;
+}
+
+.registreren>form>label {
+    font-size: 15px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+}
+
+.registreren>form>.link {
+    justify-self: right;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/* navigatie */
+
+.skew-right {
+    height: 30px;
+    width: 50px;
+    transform-origin: bottom right;
+    transform: skew(-20deg);
+    background-color: #000000;
+}
+
+.skew-left {
+    height: 30px;
+    width: 50px;
+    transform-origin: bottom left;
+    transform: skew(20deg);
+    background-color: #000000;
+}
+
+/* over brouwerij link in navigatie */
+
+.nav-over-brouwerij {
+    background-color: #000000;
+    padding: 0 20px;
+    width: 150px;
+    height: 30px;
+    text-decoration: none;
+    font-family: PoppinsRegular;
+}
+
+/* over contact maken link in navigatie */
+
+.nav-contact-maken {
+    background-color: #000000;
+    padding: 0 20px;
+    width: 150px;
+    height: 30px;
+    text-decoration: none;
+    font-family: PoppinsRegular;
+}
+
+/* info blok op de homepagina */
+
+.info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 200px;
+    height: 400px;
+}
+
+/* linker kant van de info blok */
+
+.info-advertentie {
+    margin: 30px;
+    display: block;
+    position: relative;
+    z-index: 0;  
+}
+
+.info-advertentie::before {
+    margin: 0;
+    content: "";
+    background-image: url('/_images/firewire.jpg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+}
+
+/* rechterkant van de info blok */
+
+.info-bestellen {
+    margin: 30px;
+}
+
+.info-bestellen-knop {
+    margin: 10px 0;
+}
+
+figure {
+    fill: #FAB600;
+}
+
+/* notificatie sectie van de homepagina */
+
+.notificatie {
+    display: grid;
+    grid-template-columns: 15% 60% 10%;
+    padding: 10px 0;
+    align-items: center;
+    height: 120px;
+    text-align: start;
+    justify-content: center;
+
+}
+
+.notificatie>h2 {
+    font-family: NexaLight;
+    color: #FAB600;
+    font-size: 40px;
+}
+
+.notificatie-icon>svg{
+    height: 90px;
+}
+
+/* email gedeelte van de notificatie sectie */
+
+.notificatie-email {
+    display: grid;
+    grid-template-rows: 20px 20px 60px;
+    row-gap: 10px;
+}
+
+.notificatie-email>input[type=text] {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.notificatie-email-knop {
+    height: 30px;
+    width: 100px;
+    font-size: 10px;
+    grid-column-end: 3;
+    justify-self: right;
+}
+
+/* over de brouwerij sectie op de homepagina */
+
+.over-brouwerij {
+    display: grid;
+    grid-template-rows: 30% 1fr;
+    grid-template-columns: 35% auto;
+    padding: 50px;
+}
+
+.over-brouwerij-titel {
+    margin-bottom: 50px;
+}
+
+.over-brouwerij-foto {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    height: 300px;
+    justify-self: right;
+}
+
+/* contact sectie van de homepagina */
+
+.contact {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 50% 50%;
+    padding: 50px;
+}
+
+.contact-titel {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* formulier van de contact sectie */
+
+.contact-form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 30% 30%;
+    grid-gap: 10px 20px;
+}
+
+label {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+input[type=text] {
+    font-family: NexaLight;
+    font-size: 15px;
+}
+
+textarea {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 16;
+    grid-row-start: 7;
+}
+
+.contact-form-knop {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: right;
+    font-size: 10px;
+    height: auto;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.contact-info>h3 {
+    margin-top: 30px;
+}
+
+/* footer van de website */
+
+.footer-info {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 15% 15% 15%;
+    text-align: center;
+    justify-content: center;
+    grid-gap: 20%;
+    padding: 10px 10px 10px 0 ;
+}
+
+.footer-info>article>p {
+    font-family: NexaLight;
+}
+
+.footer-info-notificatie {
+    text-align: start;
+}
+
+.social-media {
+    background-color: transparent;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 15% 15% 15%;
+    justify-content: center;
+}
+
+.social-media>svg {
+    height: 100px;
+    fill: #FAB600;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 100px;
+    width: 100%;
+}
+
+.social-media>svg:hover {
+    fill: #FFFFFF;
+}
+
+/* Sequence Map */
+
+.sequence-map {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
+    background-color: transparent;
+    margin: 150px 0 50px 0;
+}
+
+.sequence-map>figure {
+    background-color: black;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sequence-map>figure>svg {
+    height: 80px;
+    width: 80px;
+    fill: #FFFFFF;
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.sequence-map-lijn {
+    content: ';';
+    position: absolute;
+    left: 115px;
+    top: 220px;
+    height: 10px;
+    width: 80%;
+    background-color: #000000;
+}
+
+.huidige {
+    background-color: #FAB600 !important;
+}
+
+.huidige>svg {
+    fill: #000000 !important;
+}
+
+
+/* Adres pagina */
+
+.adres-form {
+    background-color: transparent;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 20px;
+    margin: 0 0 150px 0;
+}
+
+.adres-form>p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.adres-form>form {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.adres-form>form>input[type=text] {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.adres-form>form>.primary-button {
+    justify-self: right;
+}
+
+/* account verder pop up */
+
+.account-verder {
+    height: 100%;
+    width: 100%;
+}
+
+.account-verder::after {
+    content: "";
+    background-color: #000000;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 5;   
+  }
+
+.account-verder-blok {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    width: 500px;
+    height: 250px;
+    z-index: 6;
+    display: grid;
+    grid-template-columns: 35% 30% 30% 15px;
+    grid-template-rows: auto;
+    padding: 20px;
+    justify-items: center;
+}
+
+.account-verder-blok>h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.account-verder-blok>svg {
+    height: 30px;
+    fill: #FFFFFF;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    cursor: pointer;
+}
+
+.account-verder-blok>button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 5%;
+    height: 80px;
+    width: 300px;
+    font-family: NexaLight;
+}
+
+.account-verder-blok>p {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* Product Pagina link: https://stackoverflow.com/questions/1895476/how-do-i-style-a-select-dropdown-with-only-css*/
+
+select {
+    color: #FFFFFF;
+    font-family: Verdana;
+    margin: 50px;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/_images/dropdown-arrow.png") 96% / 15% no-repeat #000000;
+  }
+  
+  
+  /* CAUTION: Internet Explorer hackery ahead */
+  
+  
+  select::-ms-expand {
+      display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+  }
+  
+  /* Target Internet Explorer 9 to undo the custom arrow */
+  @media screen and (min-width:0\0) {
+      select {
+          background: none\9;
+          padding: 5px\9;
+    }
+}
+
+/* product pagina van de website */
+
+.producten {
+    width: 70%;
+    height: auto;
+    margin: 0 0 0 100px;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* product item */
+
+.product-item {
+    height: auto;
+    width: 200px;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: auto;
+    margin: 0 50px 50px 0;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.product-item>img {
+    height: 300px;
+    width: 200px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.product-item>h3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-left: 10px;
+}
+
+.product-item>span {
+    color: white;
+    margin-left: 10px;
+}
+
+.product-item>p {
+    margin-left: 10px;
+}
+
+.product-item>h2 {
+    justify-content: right;
+    margin-right: 10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.product-item>p:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-left: 10px;
+}
+
+.product-item>button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* product info pop up */
+
+.product-info {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 30%;
+    background-color: #000000;
+    width: 400px;
+    height: 400px;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+}
+
+.product-info>h1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-left: 10px;
+    align-self: center;
+}
+
+
+.product-info>svg {
+    height: 30px;
+    fill: #FFFFFF;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    cursor: pointer;
+    align-self: center;    
+}
+
+.product-info>span:nth-child(odd) {
+    color: #FFFFFF;
+    font-family: NexaBold;
+    grid-column-start: 2;
+}
+
+.product-info>span:nth-child(even) {
+    color: #FFFFFF;
+    font-family: Verdana;
+}
+
+/* Bestelling Info */
+
+.bestelling-titel {
+    margin-left: 100px;
+    font-family: PoppinsRegular;
+    display: inline;
+}
+
+.bestelling-form {
+    background-color: transparent;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 20px;
+    margin: 0 0 150px 0;
+}
+
+.bestelling-form>form {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+}
+
+.bestelling-form>form>input[type=text] {
+    margin-bottom: 20px;
+}
+
+.bestelling-form>form>input[type=text]:not(#name):not(#Telefoonnummer) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.bestelling-form>form>input[type=checkbox]{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.bestelling-form>form>div {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.bestelling-form>form>div>p {
+    display: inline;
+}
+
+.bestelling-form>form>label {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.bestelling-form>form>button{
+    margin-top: 50px;
+}
+
+.bestelling-form>form>input[type=submit]{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: right;
+    margin-top: 50px;
+}
+
+/* winkelwagen */
+
+.winkelwagen {
+    position: fixed;
+    right: 5%;
+    top: 22%;
+    height: 400px;
+    width: 300px;
+}
+
+.winkelwagen>section {
+    margin: 10px;
+}
+
+.bier-product {
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    grid-template-rows: auto;
+    width: 100%;
+}
+
+.bier-product>h3 {
+    font-family: NexaLight;
+    color: #FFFFFF;
+}
+
+.bier-product>h3:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.bier-product>h2 {
+    font-family: NexaLight;
+    color: #FFFFFF;
+}
+
+.winkelwagen-totaal {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: #E6E6E6 solid 1px;
+}
+
+.winkelwagen-totaal>h1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 10px;
+}
+
+.winkelwagen-totaal>h2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: right;
+    margin-right: 10px;
+}
+
+.winkelwagen-totaal>h3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.winkelwagen-totaal>button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 100px;
+    justify-self: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* bestelling-voltooid */
+
+.bestelling-voltooid {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.bestelling-voltooid-icon {
+    background-color: #FAB600;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: 50px;
+}
+
+.bestelling-voltooid-icon>svg {
+    fill: #FFFFFF;
+    height: 130px;
+    width: 130px;
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
